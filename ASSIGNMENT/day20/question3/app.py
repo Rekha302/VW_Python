@@ -13,7 +13,12 @@ db.init_app(app)
 with app.app_context():
     db.create_all()
 
-app.register_blueprint(book_bp)
 
+app.register_blueprint(book_bp)
+from flask import render_template
+
+@app.route("/")
+def home():
+    return render_template("index.html")
 if __name__ == "__main__":
     app.run(debug=True)
