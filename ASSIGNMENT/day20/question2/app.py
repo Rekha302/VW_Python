@@ -1,16 +1,17 @@
 from flask import Flask
-from models import db, Order
+from config import Config
+from models.order_model import db
+from routes.order_routes import order_bp
 
 app = Flask(__name__)
-
-app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:root@localhost/order_db"
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config.from_object(Config)
 
 db.init_app(app)
 
-@app.shell_context_processor
-def make_shell_context():
-    return {"db": db, "Order": Order}
-
 with app.app_context():
     db.create_all()
+
+app.register_blueprint(order_bp)
+
+if __name__ == "__main__":
+    app.run(debug=True)
