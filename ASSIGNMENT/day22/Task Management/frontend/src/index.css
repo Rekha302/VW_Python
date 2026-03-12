@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#0f172a;
+color:#e2e8f0;
+min-height:100vh;
+}
+
+#root{
+max-width:1000px;
+margin:auto;
+padding:40px 20px;
+}
+
+h1{
+text-align:center;
+font-size:2.5rem;
+margin-bottom:40px;
+color:#f1f5f9;
+}
+
+/* Cards */
+
+.task-form,
+.filters,
+.task-table-wrapper{
+background:#1e293b;
+border-radius:14px;
+padding:22px;
+margin-bottom:22px;
+border:1px solid #334155;
+}
+
+/* Inputs */
+
+.form-group{
+display:flex;
+flex-direction:column;
+gap:6px;
+flex:1;
+min-width:180px;
+}
+
+.form-group label{
+font-size:.75rem;
+color:#94a3b8;
+letter-spacing:1px;
+}
+
+.form-group input,
+.form-group select{
+background:#0f172a;
+border:1px solid #334155;
+border-radius:8px;
+padding:10px 12px;
+color:#e2e8f0;
+}
+
+.form-group input:focus,
+.form-group select:focus{
+outline:none;
+border-color:#6366f1;
+}
+
+/* Add button */
+
+.btn-add{
+background:#6366f1;
+border:none;
+padding:10px 24px;
+border-radius:8px;
+color:white;
+font-weight:600;
+cursor:pointer;
+}
+
+.btn-add:hover{
+background:#4f46e5;
+}
+
+/* Filters */
+
+.filters{
+display:flex;
+gap:20px;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.filter-group select{
+background:#0f172a;
+border:1px solid #334155;
+border-radius:6px;
+padding:6px 10px;
+color:white;
+}
+
+/* Table */
+
+.task-table{
+width:100%;
+border-collapse:collapse;
+}
+
+.task-table th{
+text-align:left;
+padding:12px;
+font-size:.75rem;
+color:#94a3b8;
+border-bottom:1px solid #334155;
+}
+
+.task-table td{
+padding:14px 12px;
+border-bottom:1px solid #1e293b;
+}
+
+.task-table tbody tr:hover{
+background:#0f172a;
+}
+
+/* Priority badges */
+
+.priority-badge{
+padding:4px 10px;
+border-radius:12px;
+font-size:.7rem;
+font-weight:600;
+}
+
+.priority-high{
+background:#7f1d1d;
+color:#fecaca;
+}
+
+.priority-medium{
+background:#78350f;
+color:#fde68a;
+}
+
+.priority-low{
+background:#064e3b;
+color:#a7f3d0;
+}
+
+/* Status */
+
+.status-badge{
+padding:4px 10px;
+border-radius:12px;
+font-size:.7rem;
+}
+
+.status-completed{
+background:#065f46;
+color:#6ee7b7;
+}
+
+.status-pending{
+background:#1e293b;
+color:#94a3b8;
+}
+
+/* Actions */
+
+.actions{
+display:flex;
+gap:8px;
+}
+
+.btn-toggle{
+background:#1e40af;
+color:white;
+border:none;
+padding:6px 12px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.btn-delete{
+background:#7f1d1d;
+color:white;
+border:none;
+padding:6px 12px;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* Completed */
+
+.completed-row{
+opacity:.5;
+text-decoration:line-through;
+}
